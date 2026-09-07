@@ -1,26 +1,26 @@
 class Perch < Formula
   desc "tmux-native home base for coding agents"
   homepage "https://github.com/idossha/perch"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/idossha/perch/releases/download/v#{version}/perch-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "921aa2f95eaa6afcbf25085e5b33b4e060f92956f2cd616f19cada7c19fa581e"
+      sha256 "deb3a77af3781d8d4e4420a919160657f2d2dae78c391071101150df9aedae1b"
     else
       url "https://github.com/idossha/perch/releases/download/v#{version}/perch-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "cc99ee97b32ac43c6ba77ec775823ff784944e5c3329087720d9036a40fb83cd"
+      sha256 "c3b1777b087349012adbcd2cf9d0b55c12cd3f63747115b135c08a8cbc7a5825"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/idossha/perch/releases/download/v#{version}/perch-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "960a09076fa2870657e79a63e1c224463797afdd1fd0b3a78104150a2a4fa266"
+      sha256 "0f1925d8c57bec013267769efe05ad9289e66d61a075ce273edb701cf2203fe1"
     else
       url "https://github.com/idossha/perch/releases/download/v#{version}/perch-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "d41e3a4fc0d025461d6842e3fed4c85d4196736ca786a38e4e8ead7a26975219"
+      sha256 "b3eac07eac3915f9d58bef5dfb19d7bcb6675f389aa76103bfcb268fd8cc363e"
     end
   end
 
@@ -35,7 +35,7 @@ class Perch < Formula
 
         perch setup
 
-      Check it any time with .
+      Check it any time with: perch doctor
     EOS
   end
 
